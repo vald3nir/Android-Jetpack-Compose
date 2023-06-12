@@ -8,5 +8,5 @@ object Const {
 
     const val PAGE_SIZE = 20
     const val KEY_API = "03add6b79d034a7aabe4bd653d12019e"
-    const val WEB_API = "https://api.rawg.io/api/"
+    const val API_URL = "https://api.rawg.io/api/"
 }
