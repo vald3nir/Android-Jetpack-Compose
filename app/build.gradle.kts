@@ -49,8 +49,6 @@ android {
 dependencies {
 
     // Koin (dependency injection framework)
-//    implementation("io.insert-koin:koin-androidx-ext:2.2.3")
-//    implementation("io.insert-koin:koin-androidx-viewmodel:2.2.3")
     implementation("io.insert-koin:koin-androidx-compose:3.4.5")
 
     // Android X
@@ -70,7 +68,7 @@ dependencies {
     implementation("androidx.compose.material3:material3")
 
     // Jetpack Compose - Navigation
-    implementation("androidx.navigation:navigation-compose:2.5.3")
+    implementation("androidx.navigation:navigation-compose:2.6.0")
 
     // Jetpack Compose - Pager
     implementation("com.google.accompanist:accompanist-pager:0.22.0-rc")
@@ -92,6 +90,10 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
+
+    // An HTTP inspector for Android & OkHTTP (like Charles but on device)
+    debugImplementation("com.github.chuckerteam.chucker:library:3.5.2")
+    releaseImplementation("com.github.chuckerteam.chucker:library-no-op:3.5.2")
 
     // Tests
     testImplementation("junit:junit:4.13.2")
