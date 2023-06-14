@@ -34,9 +34,9 @@ fun HomeScreen(
         items(gamesList.itemCount) { index ->
             gamesList[index].let { games ->
                 val id = games?.id
-                val name = games?.name ?: ""
-                val imageUrl = games?.backgroundImage ?: ""
-                val releaseDate = games?.released ?: ""
+                val name = games?.name.orEmpty()
+                val imageUrl = games?.backgroundImage.orEmpty()
+                val releaseDate = games?.released.orEmpty()
                 ProductCard(
                     modifier = modifier
                         .padding(8.dp),

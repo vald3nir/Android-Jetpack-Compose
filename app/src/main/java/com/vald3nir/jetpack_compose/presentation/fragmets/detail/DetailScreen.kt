@@ -26,11 +26,11 @@ fun DetailScreen(
 ) {
     if (games == null) return
     val scrollState = rememberScrollState()
-    val name = games.name ?: ""
-    val imageUrl = games.backgroundImage ?: ""
-    val releaseDate = games.released ?: ""
+    val name = games.name.orEmpty()
+    val imageUrl = games.backgroundImage.orEmpty()
+    val releaseDate = games.released.orEmpty()
     val description = HtmlCompat
-        .fromHtml(games.description ?: "", HtmlCompat.FROM_HTML_MODE_COMPACT)
+        .fromHtml(games.description.orEmpty(), HtmlCompat.FROM_HTML_MODE_COMPACT)
         .toString()
     val listImageCarousel = mutableListOf<String>()
     games.backgroundImage?.let {
